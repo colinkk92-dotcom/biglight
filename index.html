@@ -50,7 +50,7 @@
     @media(max-width:768px){.nav-links{display:none}.hamburger{display:flex}.nav-cta .btn-link{display:none}}
 
     /* ── HERO ── */
-    .hero{text-align:center;padding:100px 5% 80px;position:relative;overflow:hidden}
+    .hero{text-align:center;padding:100px 5% 80px;position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(91,33,182,.07) 0%,transparent 70%)}
     .hero-label{display:inline-block;font-size:.85rem;font-weight:700;color:var(--primary);background:var(--primary-soft);padding:6px 16px;border-radius:20px;margin-bottom:28px;letter-spacing:.02em}
     .hero h1{font-size:clamp(2.8rem,6vw,5rem);font-weight:900;line-height:1.05;letter-spacing:-.04em;color:var(--accent);max-width:900px;margin:0 auto 28px}
     .hero h1 .line{display:block}
@@ -111,7 +111,9 @@
     .cap-card:hover{box-shadow:var(--shadow);border-color:#c4b5fd;transform:translateY(-3px)}
     .cap-card h4{font-size:1.15rem;font-weight:700;color:var(--accent);margin-bottom:10px}
     .cap-card p{font-size:.95rem;color:var(--text-light);line-height:1.7}
-    .cap-img{width:100%;border-radius:12px;margin-bottom:20px;min-height:180px;background:linear-gradient(135deg,#ede9fe,#dbeafe);display:flex;align-items:center;justify-content:center;color:var(--primary);font-size:.85rem;font-weight:600}
+    .cap-img{width:100%;border-radius:12px;margin-bottom:20px;min-height:180px;overflow:hidden;position:relative}
+    .cap-img img{width:100%;height:180px;object-fit:cover;border-radius:12px;display:block}
+    .cap-img-svg{width:100%;height:180px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#ede9fe 0%,#dbeafe 100%)}
 
     /* ── STATS ── */
     .stats{background:linear-gradient(135deg,#1e1b4b 0%,#312e81 100%);padding:90px 5%;text-align:center}
@@ -327,22 +329,31 @@
   </div>
 
   <div class="split reverse">
-    <div class="split-visual" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div style="background:#fff;border-radius:12px;padding:24px;text-align:center;box-shadow:var(--shadow)">
-        <div style="font-size:2.2rem;font-weight:900;color:var(--primary);letter-spacing:-.04em">50+</div>
-        <div style="font-size:.8rem;color:var(--text-light);margin-top:6px">Clients Served</div>
-      </div>
-      <div style="background:#fff;border-radius:12px;padding:24px;text-align:center;box-shadow:var(--shadow)">
-        <div style="font-size:2.2rem;font-weight:900;color:var(--primary);letter-spacing:-.04em">$2B+</div>
-        <div style="font-size:.8rem;color:var(--text-light);margin-top:6px">Revenue Influenced</div>
-      </div>
-      <div style="background:#fff;border-radius:12px;padding:24px;text-align:center;box-shadow:var(--shadow)">
-        <div style="font-size:2.2rem;font-weight:900;color:var(--primary);letter-spacing:-.04em">15+</div>
-        <div style="font-size:.8rem;color:var(--text-light);margin-top:6px">Countries</div>
-      </div>
-      <div style="background:#fff;border-radius:12px;padding:24px;text-align:center;box-shadow:var(--shadow)">
-        <div style="font-size:2.2rem;font-weight:900;color:var(--primary);letter-spacing:-.04em">95%</div>
-        <div style="font-size:.8rem;color:var(--text-light);margin-top:6px">Client Retention</div>
+    <div class="split-visual" style="padding:0;overflow:hidden;position:relative;min-height:360px">
+      <!-- Real photo: global business partnership -->
+      <img
+        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=700&h=420&fit=crop&q=80"
+        alt="Business partnership team"
+        style="width:100%;height:360px;object-fit:cover;display:block;border-radius:var(--radius)"
+      />
+      <!-- Overlay stats badge -->
+      <div style="position:absolute;bottom:20px;left:20px;right:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <div style="background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:10px;padding:14px 16px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.1)">
+          <div style="font-size:1.6rem;font-weight:900;color:var(--primary);letter-spacing:-.04em">50+</div>
+          <div style="font-size:.75rem;color:var(--text-light);margin-top:2px">Clients Served</div>
+        </div>
+        <div style="background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:10px;padding:14px 16px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.1)">
+          <div style="font-size:1.6rem;font-weight:900;color:var(--primary);letter-spacing:-.04em">$2B+</div>
+          <div style="font-size:.75rem;color:var(--text-light);margin-top:2px">Revenue Influenced</div>
+        </div>
+        <div style="background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:10px;padding:14px 16px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.1)">
+          <div style="font-size:1.6rem;font-weight:900;color:var(--primary);letter-spacing:-.04em">15+</div>
+          <div style="font-size:.75rem;color:var(--text-light);margin-top:2px">Countries</div>
+        </div>
+        <div style="background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:10px;padding:14px 16px;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.1)">
+          <div style="font-size:1.6rem;font-weight:900;color:var(--primary);letter-spacing:-.04em">95%</div>
+          <div style="font-size:.75rem;color:var(--text-light);margin-top:2px">Client Retention</div>
+        </div>
       </div>
     </div>
     <div class="split-text">
@@ -374,23 +385,165 @@
     <p class="section-sub">A complete toolkit for modern businesses — from market discovery to sustained, scalable growth through strategic partnerships.</p>
   </div>
   <div class="cap-grid">
+    <!-- Card 1: Discover & Recruit -->
     <div class="cap-card">
-      <div class="cap-img">Discover & Recruit</div>
+      <div class="cap-img">
+        <div class="cap-img-svg" style="background:linear-gradient(135deg,#ede9fe 0%,#dbeafe 100%)">
+          <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Network nodes -->
+            <circle cx="160" cy="90" r="22" fill="#5b21b6" opacity=".9"/>
+            <circle cx="80"  cy="50"  r="14" fill="#7c3aed" opacity=".7"/>
+            <circle cx="240" cy="50"  r="14" fill="#7c3aed" opacity=".7"/>
+            <circle cx="60"  cy="130" r="12" fill="#a78bfa" opacity=".6"/>
+            <circle cx="260" cy="130" r="12" fill="#a78bfa" opacity=".6"/>
+            <circle cx="160" cy="155" r="10" fill="#c4b5fd" opacity=".5"/>
+            <!-- Lines -->
+            <line x1="160" y1="90" x2="80"  y2="50"  stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+            <line x1="160" y1="90" x2="240" y2="50"  stroke="#7c3aed" stroke-width="1.5" stroke-dasharray="4 3" opacity=".5"/>
+            <line x1="160" y1="90" x2="60"  y2="130" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="4 3" opacity=".4"/>
+            <line x1="160" y1="90" x2="260" y2="130" stroke="#a78bfa" stroke-width="1.5" stroke-dasharray="4 3" opacity=".4"/>
+            <line x1="160" y1="90" x2="160" y2="155" stroke="#c4b5fd" stroke-width="1.5" stroke-dasharray="4 3" opacity=".4"/>
+            <line x1="80"  y1="50" x2="60"  y2="130" stroke="#c4b5fd" stroke-width="1"   stroke-dasharray="4 3" opacity=".3"/>
+            <line x1="240" y1="50" x2="260" y2="130" stroke="#c4b5fd" stroke-width="1"   stroke-dasharray="4 3" opacity=".3"/>
+            <!-- Center icon -->
+            <text x="160" y="95" text-anchor="middle" font-size="14" fill="white">🔍</text>
+            <!-- Labels -->
+            <rect x="58"  y="38"  width="46" height="16" rx="4" fill="white" opacity=".7"/>
+            <text x="81"  y="50"  text-anchor="middle" font-size="9" fill="#5b21b6" font-weight="600">Partner A</text>
+            <rect x="218" y="38"  width="46" height="16" rx="4" fill="white" opacity=".7"/>
+            <text x="241" y="50"  text-anchor="middle" font-size="9" fill="#5b21b6" font-weight="600">Partner B</text>
+            <rect x="30"  y="134" width="60" height="16" rx="4" fill="white" opacity=".7"/>
+            <text x="60"  y="146" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="600">Influencer</text>
+            <rect x="232" y="134" width="56" height="16" rx="4" fill="white" opacity=".7"/>
+            <text x="260" y="146" text-anchor="middle" font-size="9" fill="#7c3aed" font-weight="600">Affiliate</text>
+            <!-- Matched badge -->
+            <rect x="116" y="22" width="88" height="20" rx="10" fill="#5b21b6"/>
+            <text x="160" y="36" text-anchor="middle" font-size="9" fill="white" font-weight="700">✦ 24 New Matches</text>
+          </svg>
+        </div>
+      </div>
       <h4>Discover & Recruit</h4>
       <p>Identify and onboard the right partners, influencers, and affiliates. Our intelligent matching connects you with growth opportunities that fit your brand.</p>
     </div>
+
+    <!-- Card 2: Track & Attribute -->
     <div class="cap-card">
-      <div class="cap-img" style="background:linear-gradient(135deg,#dbeafe,#ede9fe)">Track & Attribute</div>
+      <div class="cap-img">
+        <div class="cap-img-svg" style="background:linear-gradient(135deg,#dbeafe 0%,#ede9fe 100%)">
+          <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Funnel -->
+            <path d="M60 30 L260 30 L210 75 L210 145 L110 145 L110 75 Z" fill="#5b21b6" opacity=".08" stroke="#7c3aed" stroke-width="1.5"/>
+            <!-- Funnel layers -->
+            <rect x="60"  y="30" width="200" height="22" rx="4" fill="#5b21b6" opacity=".15"/>
+            <rect x="85"  y="58" width="150" height="18" rx="4" fill="#7c3aed" opacity=".2"/>
+            <rect x="105" y="82" width="110" height="18" rx="4" fill="#a78bfa" opacity=".3"/>
+            <rect x="115" y="106" width="90"  height="18" rx="4" fill="#7c3aed" opacity=".4"/>
+            <rect x="125" y="130" width="70"  height="18" rx="4" fill="#5b21b6" opacity=".6"/>
+            <!-- Labels right side -->
+            <text x="270" y="44"  font-size="9" fill="#5b21b6" font-weight="600">Clicks  12,400</text>
+            <text x="270" y="70"  font-size="9" fill="#7c3aed" font-weight="600">Leads   4,820</text>
+            <text x="270" y="94"  font-size="9" fill="#7c3aed" font-weight="600">Trials  1,930</text>
+            <text x="270" y="118" font-size="9" fill="#5b21b6" font-weight="600">Buyers    680</text>
+            <text x="270" y="142" font-size="9" fill="#5b21b6" font-weight="600">Loyal     210</text>
+            <!-- Attribution badge -->
+            <rect x="90" y="158" width="140" height="16" rx="8" fill="#5b21b6"/>
+            <text x="160" y="170" text-anchor="middle" font-size="9" fill="white" font-weight="700">Multi-Touch Attribution</text>
+          </svg>
+        </div>
+      </div>
       <h4>Track & Attribute</h4>
       <p>Track the entire customer journey across devices and customize flexible multi-touch attribution with our innovative analytics technology.</p>
     </div>
+
+    <!-- Card 3: Manage & Optimize -->
     <div class="cap-card">
-      <div class="cap-img" style="background:linear-gradient(135deg,#f3e8ff,#dbeafe)">Manage & Optimize</div>
+      <div class="cap-img">
+        <div class="cap-img-svg" style="background:linear-gradient(135deg,#f3e8ff 0%,#dbeafe 100%)">
+          <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Command center dashboard -->
+            <rect x="20" y="20" width="280" height="140" rx="10" fill="white" opacity=".6"/>
+            <!-- Header bar -->
+            <rect x="20" y="20" width="280" height="28" rx="10" fill="#5b21b6" opacity=".8"/>
+            <circle cx="36" cy="34" r="5" fill="white" opacity=".5"/>
+            <circle cx="52" cy="34" r="5" fill="white" opacity=".5"/>
+            <circle cx="68" cy="34" r="5" fill="white" opacity=".5"/>
+            <text x="150" y="38" text-anchor="middle" font-size="9" fill="white" font-weight="700">Partnership Command Center</text>
+            <!-- KPI row -->
+            <rect x="30"  y="56" width="60" height="36" rx="6" fill="#ede9fe"/>
+            <text x="60"  y="71" text-anchor="middle" font-size="8"  fill="#5b21b6" font-weight="600">Revenue</text>
+            <text x="60"  y="83" text-anchor="middle" font-size="11" fill="#5b21b6" font-weight="800">$84K</text>
+            <rect x="100" y="56" width="60" height="36" rx="6" fill="#dbeafe"/>
+            <text x="130" y="71" text-anchor="middle" font-size="8"  fill="#2563eb" font-weight="600">Partners</text>
+            <text x="130" y="83" text-anchor="middle" font-size="11" fill="#2563eb" font-weight="800">112</text>
+            <rect x="170" y="56" width="60" height="36" rx="6" fill="#dcfce7"/>
+            <text x="200" y="71" text-anchor="middle" font-size="8"  fill="#16a34a" font-weight="600">Conv. Rate</text>
+            <text x="200" y="83" text-anchor="middle" font-size="11" fill="#16a34a" font-weight="800">4.8%</text>
+            <rect x="240" y="56" width="50" height="36" rx="6" fill="#fef3c7"/>
+            <text x="265" y="71" text-anchor="middle" font-size="8"  fill="#d97706" font-weight="600">Pending</text>
+            <text x="265" y="83" text-anchor="middle" font-size="11" fill="#d97706" font-weight="800">7</text>
+            <!-- Chart area -->
+            <rect x="30"  y="100" width="160" height="50" rx="6" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+            <polyline points="40,138 65,122 90,128 115,110 140,115 165,104 178,108" stroke="#5b21b6" stroke-width="2" fill="none" stroke-linecap="round"/>
+            <!-- Status list -->
+            <rect x="200" y="100" width="90" height="12" rx="3" fill="#dcfce7"/>
+            <text x="245" y="110" text-anchor="middle" font-size="7.5" fill="#16a34a" font-weight="600">✓ Payments processed</text>
+            <rect x="200" y="116" width="90" height="12" rx="3" fill="#dbeafe"/>
+            <text x="245" y="126" text-anchor="middle" font-size="7.5" fill="#2563eb" font-weight="600">↑ 3 new contracts</text>
+            <rect x="200" y="132" width="90" height="12" rx="3" fill="#fef3c7"/>
+            <text x="245" y="142" text-anchor="middle" font-size="7.5" fill="#d97706" font-weight="600">⏳ 7 pending review</text>
+          </svg>
+        </div>
+      </div>
       <h4>Manage & Optimize</h4>
       <p>Centralize all partnership workflows — communications, contracts, payments, and reporting — in one unified command center.</p>
     </div>
+
+    <!-- Card 4: Scale & Grow -->
     <div class="cap-card">
-      <div class="cap-img" style="background:linear-gradient(135deg,#ecfdf5,#dbeafe)">Scale & Grow</div>
+      <div class="cap-img">
+        <div class="cap-img-svg" style="background:linear-gradient(135deg,#ecfdf5 0%,#dbeafe 100%)">
+          <svg viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+            <!-- Grid lines -->
+            <line x1="40" y1="40"  x2="40"  y2="150" stroke="#e2e8f0" stroke-width="1"/>
+            <line x1="40" y1="150" x2="290" y2="150" stroke="#e2e8f0" stroke-width="1"/>
+            <line x1="40" y1="120" x2="290" y2="120" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="40" y1="90"  x2="290" y2="90"  stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3"/>
+            <line x1="40" y1="60"  x2="290" y2="60"  stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3 3"/>
+            <!-- Area fill -->
+            <path d="M40 148 L80 140 L120 130 L160 115 L200 95 L240 72 L280 50 L280 150 Z" fill="url(#growGrad)" opacity=".3"/>
+            <defs>
+              <linearGradient id="growGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#5b21b6"/>
+                <stop offset="100%" stop-color="#5b21b6" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <!-- Line -->
+            <polyline points="40,148 80,140 120,130 160,115 200,95 240,72 280,50" stroke="#5b21b6" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Data points -->
+            <circle cx="40"  cy="148" r="4" fill="#5b21b6"/>
+            <circle cx="80"  cy="140" r="4" fill="#5b21b6"/>
+            <circle cx="120" cy="130" r="4" fill="#5b21b6"/>
+            <circle cx="160" cy="115" r="4" fill="#5b21b6"/>
+            <circle cx="200" cy="95"  r="4" fill="#5b21b6"/>
+            <circle cx="240" cy="72"  r="4" fill="#5b21b6"/>
+            <circle cx="280" cy="50"  r="5" fill="white" stroke="#5b21b6" stroke-width="2.5"/>
+            <!-- Tooltip -->
+            <rect x="230" y="25" width="80" height="22" rx="6" fill="#5b21b6"/>
+            <text x="270" y="37" text-anchor="middle" font-size="9" fill="white" font-weight="700">+284% YoY</text>
+            <line x1="270" y1="47" x2="280" y2="50" stroke="#5b21b6" stroke-width="1.5"/>
+            <!-- Y labels -->
+            <text x="34" y="44"  text-anchor="end" font-size="8" fill="#94a3b8">$400K</text>
+            <text x="34" y="64"  text-anchor="end" font-size="8" fill="#94a3b8">$300K</text>
+            <text x="34" y="94"  text-anchor="end" font-size="8" fill="#94a3b8">$200K</text>
+            <text x="34" y="124" text-anchor="end" font-size="8" fill="#94a3b8">$100K</text>
+            <!-- X labels -->
+            <text x="40"  y="163" text-anchor="middle" font-size="8" fill="#94a3b8">Q1</text>
+            <text x="120" y="163" text-anchor="middle" font-size="8" fill="#94a3b8">Q2</text>
+            <text x="200" y="163" text-anchor="middle" font-size="8" fill="#94a3b8">Q3</text>
+            <text x="280" y="163" text-anchor="middle" font-size="8" fill="#94a3b8">Q4</text>
+          </svg>
+        </div>
+      </div>
       <h4>Scale & Grow</h4>
       <p>Leverage data-driven insights to expand into new markets, launch new programs, and multiply your revenue streams with confidence.</p>
     </div>
