@@ -151,6 +151,13 @@
     .fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
     .fade-up.visible{opacity:1;transform:translateY(0)}
 
+    /* ── CONTACT GRID RESPONSIVE ── */
+    @media(max-width:700px){
+      #contact .section > div > div[style*="grid-template-columns:1fr 1fr"]{
+        grid-template-columns:1fr !important;
+      }
+    }
+
     /* ── MOBILE MENU ── */
     .mobile-nav{display:none}
     @media(max-width:768px){
@@ -574,12 +581,65 @@
 
 <!-- ── CONTACT ── -->
 <section class="section" id="contact">
-  <div style="max-width:560px;margin:0 auto">
+  <div style="max-width:900px;margin:0 auto">
     <div style="text-align:center;margin-bottom:48px">
       <div class="section-tag">Contact Us</div>
       <h2>Ready to Get Started?</h2>
       <p class="section-sub">Tell us about your business and we'll get back to you within one business day.</p>
     </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+
+    <!-- Contact Info -->
+    <div>
+      <div style="margin-bottom:32px">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin-bottom:10px">Our Office</div>
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1.5C5.51 1.5 3.5 3.51 3.5 6c0 3.75 4.5 8.5 4.5 8.5s4.5-4.75 4.5-8.5c0-2.49-2.01-4.5-4.5-4.5Zm0 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z" fill="#5b21b6"/></svg>
+          </div>
+          <div>
+            <div style="font-size:.95rem;font-weight:600;color:var(--accent);margin-bottom:3px">Hong Kong</div>
+            <div style="font-size:.88rem;color:var(--text-light);line-height:1.6">
+              8/F, D07, Block 2, Kai Tak Factory Estate<br>
+              99 King Fuk Street, San Po Kong<br>
+              Hong Kong
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:28px">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin-bottom:10px">Email</div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1.5" y="3.5" width="13" height="9" rx="1.5" stroke="#5b21b6" stroke-width="1.4"/><path d="M1.5 5.5 L8 9.5 L14.5 5.5" stroke="#5b21b6" stroke-width="1.4" stroke-linecap="round"/></svg>
+          </div>
+          <a href="mailto:corn88888@yeah.net" style="font-size:.95rem;color:var(--primary);font-weight:600;text-decoration:none">corn88888@yeah.net</a>
+        </div>
+      </div>
+
+      <div style="margin-bottom:40px">
+        <div style="font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-muted);margin-bottom:10px">Phone</div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--primary-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 2.5A1.5 1.5 0 0 1 4.5 1h.878a1.5 1.5 0 0 1 1.396.944l.63 1.575a1.5 1.5 0 0 1-.344 1.636L6 6.207C6.837 7.912 8.088 9.163 9.793 10l1.052-1.06a1.5 1.5 0 0 1 1.636-.344l1.575.63A1.5 1.5 0 0 1 15 10.622V11.5A1.5 1.5 0 0 1 13.5 13C7.148 13 2 7.852 2 1.5... wait" fill="none"/><path d="M2.5 3.5c0-.276.224-.5.5-.5h1a.5.5 0 0 1 .464.314l.75 1.875a.5.5 0 0 1-.115.546L4 6.793C4.837 8.5 7.5 11.163 9.207 12l1.058-1.099a.5.5 0 0 1 .546-.115l1.875.75A.5.5 0 0 1 13 12v1c0 .276-.224.5-.5.5C6.596 13.5 2.5 9.404 2.5 3.5Z" fill="#5b21b6"/></svg>
+          </div>
+          <a href="tel:+85261588111" style="font-size:.95rem;color:var(--primary);font-weight:600;text-decoration:none">+852 6158 8111</a>
+        </div>
+      </div>
+
+      <!-- HK Badge -->
+      <div style="display:inline-flex;align-items:center;gap:10px;background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:12px 18px">
+        <span style="font-size:1.4rem">🇭🇰</span>
+        <div>
+          <div style="font-size:.82rem;font-weight:700;color:var(--accent)">Based in Hong Kong</div>
+          <div style="font-size:.75rem;color:var(--text-muted)">Serving clients globally</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div>
     <form onsubmit="handleSubmit(event)" style="display:flex;flex-direction:column;gap:16px">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
         <div>
@@ -600,10 +660,13 @@
         <textarea placeholder="Tell us about your goals or challenges..." required style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:10px;font-size:.95rem;font-family:inherit;outline:none;transition:border-color .2s,box-shadow .2s;min-height:120px;resize:vertical"></textarea>
       </div>
       <button type="submit" class="btn-primary" style="width:100%;padding:14px">Send Message →</button>
-    </form>
     <div id="successMsg" style="display:none;background:#f0fdf4;border:1px solid #bbf7d0;color:#16a34a;border-radius:10px;padding:16px;font-size:.95rem;font-weight:500;margin-top:16px;text-align:center">
       ✓ Thank you! We'll be in touch within one business day.
     </div>
+    </form>
+    </div><!-- end form col -->
+
+    </div><!-- end grid -->
   </div>
 </section>
 
@@ -632,6 +695,17 @@
         <span class="logo-text">Big<span style="color:#a78bfa">Light</span></span>
       </a>
       <p>End-to-end growth solutions for brands that want to scale with purpose and precision.</p>
+      <div style="margin-top:20px;display:flex;flex-direction:column;gap:8px">
+        <a href="mailto:corn88888@yeah.net" style="font-size:.82rem;color:#64748b;text-decoration:none;display:flex;align-items:center;gap:6px;transition:color .2s">
+          <span style="color:#7c3aed">✉</span> corn88888@yeah.net
+        </a>
+        <a href="tel:+85261588111" style="font-size:.82rem;color:#64748b;text-decoration:none;display:flex;align-items:center;gap:6px">
+          <span style="color:#7c3aed">📞</span> +852 6158 8111
+        </a>
+        <span style="font-size:.82rem;color:#64748b;display:flex;align-items:center;gap:6px">
+          <span style="color:#7c3aed">📍</span> San Po Kong, Hong Kong 🇭🇰
+        </span>
+      </div>
     </div>
     <div class="footer-col">
       <h4>Solutions</h4>
